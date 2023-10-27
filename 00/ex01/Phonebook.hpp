@@ -9,6 +9,7 @@ class Phonebook{
   Phonebook(void);
   ~Phonebook(void);
   void print_index(int i);
+  void  add(std::string name);
 
  private:
   Contact list[8];

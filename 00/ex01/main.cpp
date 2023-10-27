@@ -2,10 +2,28 @@
 #include "Contact.hpp"
 #include "Phonebook.hpp"
 #include <iostream>
+#include <string>
 
 int main(void)
 {
   Phonebook phone;
+
+  while (true) {
+    std::string tmp;
+    std::cin >> tmp;
+    if (tmp.empty())
+      return 1;
+    if (tmp == "ADD")
+      phone.add(tmp);
+    phone.print_index(0);
+    phone.print_index(1);
+    phone.print_index(2);
+    phone.print_index(3);
+    phone.print_index(4);
+    phone.print_index(5);
+    phone.print_index(6);
+  }
+  return 0;
 }
 
 /*
@@ -14,15 +32,15 @@ using namespace std;
 
 class Employee {
   private:
-    // Private attribute
+    ? Private attribute
     int salary;
 
   public:
-    // Setter
+    ? Setter
     void setSalary(int s) {
       salary = s;
     }
-    // Getter
+    ? Getter
     int getSalary() {
       return salary;
     }

@@ -9,6 +9,7 @@ class Contact {
   Contact(void);
   ~Contact(void);
   void print_list(void) const;
+  void set_name(std::string name);
 
  private:
   std::string first_name;
