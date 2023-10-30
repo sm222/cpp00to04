@@ -14,6 +14,7 @@ class Phonebook{
 
  private:
   void move_data(void);
+  void print_data(int i);
   Contact list[8];
 };
 

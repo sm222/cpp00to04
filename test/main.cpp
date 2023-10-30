@@ -14,11 +14,14 @@ int main(void)
     std::cin >> tmp;
     if (tmp.empty())
       return 1;
-    if (tmp == "ADD")
+    else if (tmp == "ADD" || tmp == "add")
       phone.add();
-    if (tmp == "EXIT")
+    else if (tmp == "EXIT" || tmp == "exit")
       return 0;
-    phone.search();
+    else if (tmp == "SEARCH" || tmp == "search")
+      phone.search();
+    else
+      std::cout << "bad input" << std::endl;
   }
   return 0;
 }
