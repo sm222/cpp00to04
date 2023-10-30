@@ -1,11 +1,13 @@
 
 NAME = a.out
 
-CC = g++
+CC = c++
 
 CFLAG =  -std=c++98 -Wall -Werror -Wextra -g
 
-SRCS = main.cpp
+SRCS =	Contact.cpp\
+		Phonebook.cpp\
+		main.cpp\
 
 OBJS	=	$(SRCS:.cpp=.o)
 
