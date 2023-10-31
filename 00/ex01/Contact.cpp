@@ -2,13 +2,10 @@
 #include <iostream>
 #include <string>
 
-Contact::Contact(void)
-{
-  std::cout << "A\n";
+Contact::Contact(void) {
 }
 
-Contact::~Contact(void)
-{
+Contact::~Contact(void) {
 }
 
 std::string  Contact::read_val(int i) {

@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-int main(int ac, char **av)
-{
+int main(int ac, char **av) {
+  
   if (ac < 2)
   {
     std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;

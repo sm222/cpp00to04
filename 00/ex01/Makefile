@@ -1,5 +1,5 @@
 
-NAME = a.out
+NAME = Phonebook
 
 CC = c++
 

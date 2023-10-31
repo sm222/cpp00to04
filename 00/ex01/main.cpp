@@ -4,8 +4,7 @@
 #include <iostream>
 #include <string>
 
-int main(void)
-{
+int main(void) {
   Phonebook phone;
 
   std::cout << "Welcome to my phonebook" << std::endl;
@@ -15,11 +14,11 @@ int main(void)
     std::getline(std::cin, tmp);
     if (std::cin.fail())
       return (1);
-    else if (tmp == "ADD" || tmp == "add")
+    else if (tmp == "ADD")
       phone.add();
-    else if (tmp == "EXIT" || tmp == "exit")
+    else if (tmp == "EXIT")
       return (0);
-    else if (tmp == "SEARCH" || tmp == "search")
+    else if (tmp == "SEARCH")
       phone.search();
     else
       std::cout << "bad input" << std::endl;

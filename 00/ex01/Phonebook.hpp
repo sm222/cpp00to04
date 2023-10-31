@@ -4,7 +4,7 @@
 #define PHONEBOOK_HPP_
 
 // Class declaration
-class Phonebook{
+class Phonebook {
  public:
   Phonebook(void);
   ~Phonebook(void);
