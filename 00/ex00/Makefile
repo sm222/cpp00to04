@@ -5,7 +5,7 @@ CC = g++
 
 CFLAG =  -std=c++98 -Wall -Werror -Wextra -g
 
-SRCS = main.cpp
+SRCS = megaphone.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

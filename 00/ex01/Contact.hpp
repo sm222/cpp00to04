@@ -2,21 +2,26 @@
 #ifndef CONTACT_HPP_
 #define CONTACT_HPP_
 
-// Class declaration
+
+typedef enum e_str_type{
+  first_name,
+  last_name,
+  nick_name,
+  phone_number,
+  secret
+} t_str;
+
 #include <string>
+
 class Contact {
  public:
   Contact(void);
   ~Contact(void);
-  void print_list(void) const;
-  void set_name(std::string name);
+  void  set_index(std::string str, int i);
+  std::string read_val(int i);
 
  private:
-  std::string first_name;
-  std::string last_name;
-  std::string nick_name;
-  std::string phone_number;
-  std::string secret;
+  std::string str[5];
 };
 
 #endif // CONTACT_HPP_
