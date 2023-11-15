@@ -1,9 +1,11 @@
 #include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main(void) {
 
-  Weapon a;
-
+  HumanB  bob("bob");
+  HumanA  bob2("bob2",);
 }
 
 /*
