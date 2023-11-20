@@ -4,8 +4,10 @@
 
 int main(void) {
 
+  Weapon test("gun");
   HumanB  bob("bob");
-  HumanA  bob2("bob2",);
+  //HumanA  bob2("bob2",);
+  std::cout << test.getType();
 }
 
 /*
