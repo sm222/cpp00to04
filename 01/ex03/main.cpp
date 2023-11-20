@@ -4,10 +4,11 @@
 
 int main(void) {
 
+  std::string name = "bob";
   Weapon test("gun");
-  HumanB  bob("bob");
-  //HumanA  bob2("bob2",);
-  std::cout << test.getType();
+  HumanB  bob(name);
+  HumanA  bob2(name, test);
+  std::cout << test.getType() << std::endl;
 }
 
 /*

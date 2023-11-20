@@ -11,7 +11,7 @@ class HumanA {
   ~HumanA();
 
  private:
-  std::string _name;
+  const std::string _name;
   Weapon &_arm;
 };
 
