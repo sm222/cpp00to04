@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "d:/C_code/cpp00to04/00/ex00",
-      "program": "d:/C_code/cpp00to04/00/ex00/build/Debug/outDebug",
+      "externalConsole": false,
+      "cwd": "/home/antoine/Documents/42/cpp00to04/01/ex04",
+      "program": "/home/antoine/Documents/42/cpp00to04/01/ex04/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

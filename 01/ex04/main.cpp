@@ -1,6 +1,13 @@
 
 #include <iostream>
+#include <sstream>
 #include <fstream>
+
+std::string ft_toString(std::ostream &in) {
+  std::ostringstream  out;
+  out << in.rdbuf();
+  return (out.str());
+};
 
 int main(int ac, char **av) {
   if (ac < 4)
@@ -11,6 +18,8 @@ int main(int ac, char **av) {
   std::ofstream inFile;
 
   inFile.open(av[1], std::ios::in);
-  std::cout << inFile.rdbuf();
-  
+  std::string txt;
+  txt += ft_toString(inFile);
+  std::cout << txt.find(av[2], 0);
+
 }
