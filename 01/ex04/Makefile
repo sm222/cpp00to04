@@ -1,4 +1,4 @@
-NAME = Sed
+NAME = replace
 
 CC = g++
 
