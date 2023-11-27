@@ -3,13 +3,22 @@
 #include <sstream>
 #include <fstream>
 
+size_t  ft_strlen(const char *s) {
+  size_t i = 0;
+
+  if (s)
+    while (s[i])
+      i++;
+  return (i);
+}
+
 static int err(std::string msg) {
   std::cerr << msg << std::endl;
   return (1);
 }
 
 static int lookArgs(char **av) {
-  if (!std::strlen(av[2]) || !std::strlen(av[3]))
+  if (!av[2][0] || !av[3][0])
     return (err("invalid args len"));
   return (0);
 }
@@ -35,12 +44,15 @@ int main(int ac, char **av) {
   std::ifstream inFile;
   std::ofstream outFile;
   std::string line;
+  size_t  s1 = 0, s2 = 0;
 
   if (ac < 4)
     return (err("invalie arg"));
   //open the file in and out and look at args
   if (lookArgs(av) || openFile(inFile, outFile, av))
     return (1);
+  s1 = ft_strlen(av[2]);
+  s2 = ft_strlen(av[3]);
   while (getline(inFile, line))
   {
     size_t  i = 0;
@@ -50,10 +62,10 @@ int main(int ac, char **av) {
       tmp = line.find(av[2], i);
       if (tmp != std::string::npos)
       {
-        line.erase(tmp, std::strlen(av[2]));
-        line.insert(tmp, av[3], std::strlen(av[3]));
+        line.erase(tmp, s1);
+        line.insert(tmp, av[3], s2);
       }
-      i += tmp;
+      i += s1;
     }
     if (line.empty())
       outFile << std::endl;
