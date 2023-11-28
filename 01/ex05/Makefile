@@ -5,6 +5,7 @@ CC = g++
 CFLAG =  -std=c++98 -Wall -Werror -Wextra -g
 
 SRCS =	main.cpp\
+		Harl.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
