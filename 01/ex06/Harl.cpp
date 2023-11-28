@@ -1,18 +1,22 @@
 #include "Harl.hpp"
 
 void  Harl::debug(void) {
+  std::cout << "[ DEBUG ]" << std::endl;
   std::cout << DEBUG << std::endl;
 };
 
 void  Harl::info(void) {
+  std::cout << "[ INFO ]" << std::endl;
   std::cout << INFO << std::endl;
 };
 
 void  Harl::warning(void) {
+  std::cout << "[ WARNING ]" << std::endl;
   std::cout << WARNING << std::endl;
 };
 
 void  Harl::error(void) {
+  std::cout << "[ ERROR ]" << std::endl;
   std::cout << ERROR << std::endl;
 };
 
@@ -28,19 +32,21 @@ Harl::Harl(void) {
   this->name[3] = "ERROR";
 };
 
-void Harl::complain(std::string level) {
+int Harl::complain(std::string level) {
 
-  size_t  i = 0;
+  int  i = 0;
 
   while (i < 4)
   {
     if (level.compare(this->name[i]) == 0)
-    {
-      (this->*msg[i])();
-      break ;
-    }
+      return (i);
     i++;
   }
+  return (i);
+}
+
+void  Harl::callFt(int i) {
+  (this->*msg[i])();
 }
 
 Harl::~Harl(void) {
