@@ -47,7 +47,7 @@ int main(int ac, char **av) {
   size_t  s1 = 0, s2 = 0;
 
   if (ac < 4)
-    return (err("invalie arg"));
+    return (err("invalie arg, need > file word newWord"));
   //open the file in and out and look at args
   if (lookArgs(av) || openFile(inFile, outFile, av))
     return (1);

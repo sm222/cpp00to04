@@ -1,6 +1,6 @@
 NAME = HarlFilter
 
-CC = g++
+CC = c++
 
 CFLAG =  -std=c++98 -Wall -Werror -Wextra -g
 
