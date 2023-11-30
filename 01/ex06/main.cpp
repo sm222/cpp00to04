@@ -9,22 +9,28 @@ int main(int ac, char **av) {
     std::string arg = av[1];
     int code = bot.complain(arg);
 
-    switch (code)
-    {
+    switch (code) {
     case (0):
-      bot.callFt(0);
+      bot.callFt(code++);
     case (1):
-      bot.callFt(1);
+      bot.callFt(code++);
     case (2):
-      bot.callFt(2);
+      bot.callFt(code++);
     case (3):
-      bot.callFt(3);
+      bot.callFt(code++);
       break ;
     default:
       std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
       break;
     }
+    return (0);
   }
   else
-    std::cout << "**silence**" << std::endl;
+  {
+    if (ac == 1)
+      std::cout << "[ silence ]" << std::endl;
+    else
+      std::cout << "[ Harl is overwhelm ]" << std::endl;
+  }
+  return (1);
 }

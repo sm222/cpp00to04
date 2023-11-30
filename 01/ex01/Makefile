@@ -1,5 +1,5 @@
 
-NAME = Zombies
+NAME = ZombieseHorde
 
 CC = g++
 
