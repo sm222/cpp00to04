@@ -7,3 +7,5 @@ make -C 01/ex03 fclean
 make -C 01/ex04 fclean
 make -C 01/ex05 fclean
 make -C 01/ex06 fclean
+make -C 02/ex00 fclean
+make -C 02/ex01 fclean
