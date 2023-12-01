@@ -14,7 +14,7 @@ class Fixed {
   int getRawBits(void) const;
   void setRawBits(int const raw);
  private:
-  int              _rawBits;
+  int              _raw_bits;
   static const int _poin;
 };
 

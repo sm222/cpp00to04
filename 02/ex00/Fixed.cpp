@@ -3,9 +3,8 @@
 
 const int Fixed::_poin = 8;
 
-Fixed::Fixed(void) {
+Fixed::Fixed(void) : _raw_bits(0) {
   std::cout << "Default constructor called" << std::endl;
-  this->_rawBits = 0;
 }
 
 Fixed::Fixed(const Fixed &other) {
@@ -15,18 +14,18 @@ Fixed::Fixed(const Fixed &other) {
 
 Fixed &Fixed::operator=(const Fixed &rhs) {
   std::cout << "Copy assignment operator called" << std::endl;
-  this->_rawBits = rhs.getRawBits();
+  this->_raw_bits = rhs.getRawBits();
   return (*this);
 }
 
 int Fixed::getRawBits(void) const {
   std::cout << "getRawBits member function called" << std::endl;
-  return (this->_rawBits);
+  return (this->_raw_bits);
 }
 
 void Fixed::setRawBits(int const raw) {
   std::cout << "setRawBits member function called" << std::endl;
-  this->_rawBits = raw;
+  this->_raw_bits = raw;
 }
 
 Fixed::~Fixed(void) {
