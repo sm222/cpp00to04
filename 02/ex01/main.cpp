@@ -6,7 +6,7 @@
 
 int main( void ) {
   Fixed a;
-  Fixed const b( 10 );
+  Fixed const b( 1234 );
   Fixed const c( 42.42f );
   Fixed const d( b );
 
@@ -15,4 +15,11 @@ int main( void ) {
   std::cout << "b is " << b << std::endl;
   std::cout << "c is " << c << std::endl;
   std::cout << "d is " << d << std::endl;
+
+  std::cout << " b = " << b.toFloat() << std::endl;
+  std::cout << " c = " << c.toFloat() << std::endl;
+  std::cout << " a = " << a.toFloat() << std::endl;
+  std::cout << " b = " << b.toInt() << std::endl;
+  std::cout << " c = " << c.toInt() << std::endl;
+  std::cout << " a = " << a.toInt() << std::endl;
 }

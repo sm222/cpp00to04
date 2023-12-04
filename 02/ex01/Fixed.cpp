@@ -7,11 +7,11 @@ Fixed::Fixed(void) : _raw_bits(0) {
   std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(int const raw) : _raw_bits(raw) {
+Fixed::Fixed(int const raw) : _raw_bits(raw << _poin) {
   std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(float const raw) : _raw_bits(raw) {
+Fixed::Fixed(float const raw) : _raw_bits(raw * pow(2, _poin)) {
   std::cout << "Int constructor called" << std::endl;
 }
 
@@ -41,11 +41,20 @@ void Fixed::setRawBits(int const raw) {
   this->_raw_bits = raw;
 }
 
+float Fixed::toFloat(void) const {
+  return ((float)_raw_bits / (float)(1 << _poin));
+}
+
+int Fixed::toInt(void) const {
+  return ((_raw_bits ^ _poin) >> _poin);
+}
+
 Fixed::~Fixed(void) {
   std::cout << "Destructor called" << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &ptr) {
-  os << ptr.getRawBits();
+  os << ptr.toFloat();
   return (os);
 }
+
