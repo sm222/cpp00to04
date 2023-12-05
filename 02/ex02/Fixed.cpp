@@ -31,6 +31,12 @@ Fixed &Fixed::operator=(const Fixed &rhs) {
   return (*this);
 }
 
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+/*                                                        */
+/*                                                        */
+/*                                                        */
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
 int Fixed::getRawBits(void) const {
   std::cout << "getRawBits member function called" << std::endl;
   return (this->_raw_bits);
@@ -57,6 +63,12 @@ std::ostream &operator<<(std::ostream &os, const Fixed &ptr) {
   os << ptr.toFloat();
   return (os);
 }
+
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+/*                                                        */
+/*                                                        */
+/*                                                        */
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
 bool Fixed::operator>(const Fixed &rhs) const {
   bool result;
@@ -93,4 +105,67 @@ bool Fixed::operator!=(const Fixed &rhs) const {
   bool result;
   (getRawBits() != rhs.getRawBits()) ? result = true :result = false;
   return (result);
+}
+
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+/*                                                        */
+/*                                                        */
+/*                                                        */
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+Fixed Fixed::operator+(const Fixed &rhs) const {
+  Fixed tmp;
+
+  tmp.setRawBits(getRawBits() + rhs.getRawBits());
+  return (tmp);
+}
+
+Fixed Fixed::operator-(const Fixed &rhs) const {
+  Fixed tmp;
+
+  tmp.setRawBits(getRawBits() - rhs.getRawBits());
+  return (tmp);
+}
+
+Fixed Fixed::operator*(const Fixed &rhs) const {
+  Fixed tmp;
+
+  tmp.setRawBits(getRawBits() * rhs.getRawBits());
+  return (tmp);
+}
+
+Fixed Fixed::operator/(const Fixed &rhs) const {
+  Fixed tmp;
+
+  tmp.setRawBits((getRawBits() << _poin)/ rhs.getRawBits());
+  return (tmp);
+}
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+/*                                                        */
+/*                                                        */
+/*                                                        */
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+Fixed &Fixed::operator++(void) {
+  _raw_bits++;
+  return (*this);
+}
+
+Fixed &Fixed::operator--(void) {
+  _raw_bits--;
+  return (*this);
+}
+
+Fixed &Fixed::operator++(int) {
+  Fixed tmp = *this;
+
+  (*this)++;
+  return (tmp);
+}
+
+Fixed &Fixed::operator--(int) {
+  Fixed tmp = *this;
+
+  (*this)--;
+  return (tmp);
 }
