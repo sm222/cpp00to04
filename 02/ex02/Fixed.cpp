@@ -140,6 +140,7 @@ Fixed Fixed::operator/(const Fixed &rhs) const {
   tmp.setRawBits((getRawBits() << _poin)/ rhs.getRawBits());
   return (tmp);
 }
+
 //  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 /*                                                        */
 /*                                                        */
@@ -156,16 +157,38 @@ Fixed &Fixed::operator--(void) {
   return (*this);
 }
 
-Fixed &Fixed::operator++(int) {
+Fixed Fixed::operator++(int) {
   Fixed tmp = *this;
 
   (*this)++;
   return (tmp);
 }
 
-Fixed &Fixed::operator--(int) {
+Fixed Fixed::operator--(int) {
   Fixed tmp = *this;
 
   (*this)--;
   return (tmp);
+}
+
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+/*                                                        */
+/*                                                        */
+/*                                                        */
+//  - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+
+static Fixed &min(Fixed &a, Fixed &b) {
+  return ((a < b) ? a : b);
+}
+
+  static const Fixed &min(const Fixed &a, const Fixed &b) {
+  return ((a < b) ? a : b);
+}
+
+static Fixed &max(Fixed &a, Fixed &b) {
+  return ((a > b) ? a : b);
+}
+
+static const Fixed &max(const Fixed &a,const Fixed &b) {
+  return ((a > b) ? a : b);
 }
