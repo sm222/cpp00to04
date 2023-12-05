@@ -8,12 +8,12 @@
 // Class declaration
 class Fixed {
  public:
-  Fixed();
+  Fixed(void);
   Fixed(int const raw);
   Fixed(float const raw);
   Fixed(const Fixed &other);
   Fixed &operator=(const Fixed &rhs);
-  ~Fixed();
+  ~Fixed(void);
   //  * * * * //
   float toFloat(void) const;
   int toInt(void) const;
@@ -25,6 +25,6 @@ class Fixed {
   static const int _poin;
 };
 
-std::ostream& operator<<(std::ostream& os,const Fixed &ptr);
+std::ostream& operator<<(std::ostream &os,const Fixed &ptr);
 
 #endif // FIXED_HPP_

@@ -8,12 +8,12 @@
 // Class declaration
 class Fixed {
  public:
-  Fixed();
+  Fixed(void);
   Fixed(int const raw);
   Fixed(float const raw);
   Fixed(const Fixed &other);
   Fixed &operator=(const Fixed &rhs);
-  ~Fixed();
+  ~Fixed(void);
   //  * * * * //
   bool operator>(const Fixed &rhs) const;
   bool operator<(const Fixed &rhs) const;
