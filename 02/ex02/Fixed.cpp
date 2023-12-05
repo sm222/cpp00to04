@@ -58,3 +58,39 @@ std::ostream &operator<<(std::ostream &os, const Fixed &ptr) {
   return (os);
 }
 
+bool Fixed::operator>(const Fixed &rhs) const {
+  bool result;
+  (getRawBits() > rhs.getRawBits()) ? result = true :result = false;
+  return (result);
+}
+
+
+bool Fixed::operator<(const Fixed &rhs) const {
+  bool result;
+  (getRawBits() > rhs.getRawBits()) ? result = false :result = true;
+  return (result);
+}
+
+bool Fixed::operator>=(const Fixed &rhs) const {
+  bool result;
+  (getRawBits() >= rhs.getRawBits()) ? result = true :result = false;
+  return (result);
+}
+
+bool Fixed::operator<=(const Fixed &rhs) const {
+  bool result;
+  (getRawBits() <= rhs.getRawBits()) ? result = true :result = false;
+  return (result);
+}
+
+bool Fixed::operator==(const Fixed &rhs) const {
+  bool result;
+  (getRawBits() == rhs.getRawBits()) ? result = true :result = false;
+  return (result);
+}
+
+bool Fixed::operator!=(const Fixed &rhs) const {
+  bool result;
+  (getRawBits() != rhs.getRawBits()) ? result = true :result = false;
+  return (result);
+}

@@ -15,6 +15,13 @@ class Fixed {
   Fixed &operator=(const Fixed &rhs);
   ~Fixed();
   //  * * * * //
+  bool operator>(const Fixed &rhs) const;
+  bool operator<(const Fixed &rhs) const;
+  bool operator>=(const Fixed &rhs) const;
+  bool operator<=(const Fixed &rhs) const;
+  bool operator==(const Fixed &rhs) const;
+  bool operator!=(const Fixed &rhs) const;
+  //  * * * * //
   float toFloat(void) const;
   int toInt(void) const;
   int getRawBits(void) const;
@@ -26,6 +33,7 @@ class Fixed {
   static const int _poin;
 };
 
-std::ostream& operator<<(std::ostream& os,const Fixed &ptr);
+std::ostream& operator<<(std::ostream &os,const Fixed &ptr);
+
 
 #endif // FIXED_HPP_
