@@ -20,7 +20,6 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
 }
 
 
-
   ClapTrap::~ClapTrap(void) {
   std::cout << "ClapTrap " << getName() << " just died" << std::endl; 
 }
