@@ -5,6 +5,10 @@
 #include <iostream>
 #include <cmath>
 
+# ifndef DEBUG
+#  define DEBUG 0
+# endif
+
 // Class declaration
 class Fixed {
  public:

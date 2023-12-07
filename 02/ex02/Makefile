@@ -23,6 +23,9 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo clean $(NAME)
 
+debug:
+	c++ -std=c++98 -Wall -Werror -Wextra -g main.cpp Fixed.cpp -D DEBUG=1
+
 re: fclean all
 
 .PHONY: all 
