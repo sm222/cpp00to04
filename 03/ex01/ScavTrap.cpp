@@ -23,3 +23,20 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs) {
   this->_name = getName();
   return (*this);
 }
+
+void  ScavTrap::attack(const std::string &target) {
+  std::cout << "ScavTrap " << getName() << " hurt " << target << " for " << getAttack() << " damage" << std::endl;
+}
+
+void  ScavTrap::guardGate(void) {
+  static bool mode = false;
+
+  if (mode) {
+    mode = false;
+    std::cout << "ScavTrap " << getName() << " is not anymore in guard mode" << std::endl;
+  }
+  else {
+    mode = true;
+    std::cout << "ScavTrap " << getName() << " is now in guard mode" << std::endl;
+  }
+}

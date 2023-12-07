@@ -13,4 +13,8 @@ int main(void) {
   a.attack(b.getName());
   a.attack(b.getName());
   ScavTrap tata("tata");
+  tata.attack(a.getName());
+  tata.guardGate();
+  tata.beRepaired(2);
+  tata.guardGate();
 }
