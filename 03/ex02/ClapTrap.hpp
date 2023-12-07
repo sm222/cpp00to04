@@ -2,6 +2,10 @@
 #ifndef CLAPTRAP_HPP_
 #define CLAPTRAP_HPP_
 
+# ifdef DEBUG
+#  define DEBUG 0
+# endif
+
 // Class declaration
 #include <string>
 #include <iostream>
