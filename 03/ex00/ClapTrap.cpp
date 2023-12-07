@@ -1,10 +1,10 @@
 #include "ClapTrap.hpp"
 
-  ClapTrap::ClapTrap(std::string name) : _name(name), _hit(10), _energy(10), _attack(0) {
+ClapTrap::ClapTrap(std::string name) : _name(name), _hit(10), _energy(10), _attack(0) {
   std::cout << "make a new ClapTrap " << getName() << std::endl;
 }
 
-  ClapTrap::ClapTrap(const ClapTrap &copy) {
+ClapTrap::ClapTrap(const ClapTrap &copy) {
   std::cout << "copy ClapTrap " << _name << std::endl;
   *this = copy;
 }
@@ -21,7 +21,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
 
 
 
-  ClapTrap::~ClapTrap(void) {
+ClapTrap::~ClapTrap(void) {
   std::cout << "ClapTrap " << getName() << " just died" << std::endl; 
 }
 
@@ -57,7 +57,7 @@ unsigned int  ClapTrap::getAttack(void) const {
   return (this->_attack);
 }
 
-  void ClapTrap::attack(const std::string &target) {
+void ClapTrap::attack(const std::string &target) {
   if (getEnergy() > 0) {
     setEnergy(getEnergy() - 1);
     std::cout << "ClapTrap " << this->_name << " attack " << target << ", causing " << getAttack() << " points of damage!" << std::endl;
@@ -66,7 +66,7 @@ unsigned int  ClapTrap::getAttack(void) const {
     std::cout << "ClapTrap " << this->_name << " have no energie left" << std::endl;
 }
 
-  void ClapTrap::takeDamage(unsigned int amount) {
+void ClapTrap::takeDamage(unsigned int amount) {
   unsigned int health = getHit();
   unsigned int damage = 0;
 
