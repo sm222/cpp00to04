@@ -6,26 +6,31 @@ static void debugFt(std::string msg) {
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
+  debugFt("making a ScavTrap " + name);
   setHit(100);
   setEnergy(100);
   setAttack(30);
-  debugFt("making a ScavTrap " + name);
 }
 
-FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other.getName()){
+FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other.getName()) {
+  debugFt("FragTrap " + getName() + " make with copy");
   *this = other;
 }
 
 
 FragTrap::~FragTrap(void) {
-  debugFt("FragTrap " + getName() + " jsut die");
+  debugFt("FragTrap " + getName() + " just die");
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &rhs) {
-  debugFt("FragTrap was" + getName() + " jsut die");
+  debugFt("FragTrap was" + getName() + "  die");
   this->_energy = rhs.getEnergy();
   this->_attack= rhs.getAttack();
   this->_name = rhs.getName();
   this->_hit = rhs.getHit();
   return (*this);
+}
+
+void FragTrap::attack(const std::string &target) {
+  std::cout << "FragTrap " << getName() << " is attacking " << target << " for " << getAttack() << std::endl;
 }
