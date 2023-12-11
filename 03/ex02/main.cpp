@@ -1,20 +1,15 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main(void) {
-
-  ClapTrap a("ass");
-  ClapTrap b("butt");
+  ClapTrap raph("raph");
+  ScavTrap zac("zac");
   //ClapTrap *c = &b;
-  a.attack(b.getName());
-  a.attack(b.getName());
-  b.beRepaired(5);
-  a.attack(b.getName());
-  a.attack(b.getName());
-  ScavTrap tata("tata");
-  tata.attack(a.getName());
-  tata.guardGate();
-  tata.beRepaired(2);
-  tata.guardGate();
+  raph.attack(zac.getName());
+  raph.attack(zac.getName());
+  raph.beRepaired(5);
+  raph.attack(zac.getName());
+  raph.attack(zac.getName());
 }
