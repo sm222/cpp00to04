@@ -6,7 +6,7 @@ static void debugFt(std::string msg) {
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
-  debugFt("making a ScavTrap " + name);
+  debugFt("making a FragTrap " + name);
   setHit(100);
   setEnergy(100);
   setAttack(30);
@@ -19,7 +19,7 @@ FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other.getName()) {
 
 
 FragTrap::~FragTrap(void) {
-  debugFt("FragTrap " + getName() + " just die");
+  debugFt("FragTrap " + getName() + " Destructor called ");
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &rhs) {

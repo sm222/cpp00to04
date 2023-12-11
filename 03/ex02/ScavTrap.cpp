@@ -9,7 +9,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 }
 
 ScavTrap::~ScavTrap() {
-  std::cout << "ScavTrap " << getName() << " just died" << std::endl;
+  std::cout << "ScavTrap " << getName() << " Destructor called " << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other.getName()) {

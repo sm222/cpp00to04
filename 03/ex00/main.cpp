@@ -3,12 +3,12 @@
 
 int main(void) {
 
-  ClapTrap a("ass");
-  ClapTrap b("butt");
+  ClapTrap raph("raph");
+  ClapTrap zac("zac");
   //ClapTrap *c = &b;
-  a.attack(b.getName());
-  a.attack(b.getName());
-  b.beRepaired(5);
-  a.attack(b.getName());
-  a.attack(b.getName());
+  raph.attack(zac.getName());
+  raph.attack(zac.getName());
+  raph.beRepaired(5);
+  raph.attack(zac.getName());
+  raph.attack(zac.getName());
 }

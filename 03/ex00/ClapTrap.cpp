@@ -22,7 +22,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
 
 
 ClapTrap::~ClapTrap(void) {
-  std::cout << "ClapTrap " << getName() << " just died" << std::endl; 
+  std::cout << "ClapTrap " << getName() << " Destructor called " << std::endl; 
 }
 
 void  ClapTrap::setName(std::string &name) {
