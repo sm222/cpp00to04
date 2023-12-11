@@ -17,7 +17,7 @@ Fixed::Fixed(int const raw) : _raw_bits(raw << _poin) {
 }
 
 Fixed::Fixed(float const raw) : _raw_bits(raw * pow(2, _poin)) {
-  debugFt("Int constructor called");
+  debugFt("float constructor called");
 }
 
 std::ostream& operator<<(std::ostream& os, Fixed &ptr) {

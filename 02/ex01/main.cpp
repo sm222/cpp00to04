@@ -16,10 +16,10 @@ int main( void ) {
   std::cout << "c is " << c << std::endl;
   std::cout << "d is " << d << std::endl;
 
-  std::cout << " b = " << b.toFloat() << std::endl;
-  std::cout << " c = " << c.toFloat() << std::endl;
-  std::cout << " a = " << a.toFloat() << std::endl;
-  std::cout << " b = " << b.toInt() << std::endl;
-  std::cout << " c = " << c.toInt() << std::endl;
-  std::cout << " a = " << a.toInt() << std::endl;
+  std::cout << "toFloat  a = " << a.toFloat() << std::endl;
+  std::cout << "toFloat  b = " << b.toFloat() << std::endl;
+  std::cout << "toFloat  c = " << c.toFloat() << std::endl;
+  std::cout << "toInt  a = " << a.toInt() << std::endl;
+  std::cout << "toInt  b = " << b.toInt() << std::endl;
+  std::cout << "toInt  c = " << c.toInt() << std::endl;
 }

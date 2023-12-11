@@ -3,7 +3,6 @@
 #define FIXED_HPP_
 
 #include <iostream>
-#include <cmath>
 
 # ifndef DEBUG
 #  define DEBUG 0
