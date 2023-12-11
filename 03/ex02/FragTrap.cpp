@@ -32,5 +32,9 @@ FragTrap &FragTrap::operator=(const FragTrap &rhs) {
 }
 
 void FragTrap::attack(const std::string &target) {
-  std::cout << "FragTrap " << getName() << " is attacking " << target << " for " << getAttack() << std::endl;
+  std::cout << "FragTrap " << getName() << " is making damage to " << target << " for " << getAttack() << std::endl;
+}
+
+void FragTrap::highFivesGuys(void) {
+  std::cout << "FragTrap " << getName() << " is looking aroud for some five ..." << std::endl;
 }

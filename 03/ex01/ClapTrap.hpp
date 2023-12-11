@@ -13,13 +13,13 @@ class ClapTrap {
   ClapTrap &operator=(const ClapTrap &rhs);
   ~ClapTrap(void);
   // * name * //
-  void         setName(std::string &name);
   std::string  getName(void) const;
   // * * * * //
   virtual void attack(const std::string &target);
   void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
-
+ private:
+  void         setName(std::string &name);
  protected:
  // * hit  * //
   void         setHit(unsigned int hit);

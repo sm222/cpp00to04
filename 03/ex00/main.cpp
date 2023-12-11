@@ -7,4 +7,7 @@ int main(void) {
   ClapTrap zac("zac");
 
   zac.attack(raph.getName());
+  raph.beRepaired(1);
+  raph.attack(zac.getName());
+  zac.beRepaired(1);
 }

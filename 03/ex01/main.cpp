@@ -4,17 +4,16 @@
 
 int main(void) {
 
-  ClapTrap a("ass");
-  ClapTrap b("butt");
-  //ClapTrap *c = &b;
-  a.attack(b.getName());
-  a.attack(b.getName());
-  b.beRepaired(5);
-  a.attack(b.getName());
-  a.attack(b.getName());
-  ScavTrap tata("tata");
-  tata.attack(a.getName());
-  tata.guardGate();
-  tata.beRepaired(2);
-  tata.guardGate();
+  ClapTrap raph("raph");
+  ScavTrap zac("zac");
+
+  zac.guardGate();
+  raph.beRepaired(11);
+  zac.attack(raph.getName());
+  raph.takeDamage(20);
+  raph.attack(zac.getName());
+  zac.beRepaired(1);
+  zac.attack(raph.getName());
+  raph.takeDamage(20);
+  zac.guardGate();
 }
