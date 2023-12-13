@@ -28,11 +28,6 @@ std::string Animal::getType(void) const{
   return (this->_type);
 }
 
-void  Animal::makeSound(void) {
-  if (getType() == "Cat")
-    std::cout << "miou" << std::endl;
-  else if (getType() == "Dog")
-    std::cout << "waf" << std::endl;
-  else
-    std::cout << "this not human..." << std::endl;
+void  Animal::makeSound(void) const {
+    std::cout << "silence ..." << std::endl;
 }
