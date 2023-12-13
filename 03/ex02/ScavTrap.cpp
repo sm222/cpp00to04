@@ -25,7 +25,16 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs) {
 }
 
 void  ScavTrap::attack(const std::string &target) {
-  std::cout << "ScavTrap " << getName() << " hurt " << target << " for " << getAttack() << " damage" << std::endl;
+  if (!getHit()) {
+      std::cout << "ScavTrap " << this->_name << " can't attack ... is dead" << std::endl;
+    return ;
+  }
+  if (getEnergy() > 0) {
+    setEnergy(getEnergy() - 1);
+    std::cout << "ScavTrap " << getName() << " hurt " << target << " for " << getAttack() << " damage" << std::endl;
+  }
+  else
+    std::cout << "ScavTrap " << this->_name << " have no energie left" << std::endl;
 }
 
 void  ScavTrap::guardGate(void) {
