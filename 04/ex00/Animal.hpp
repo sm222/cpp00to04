@@ -1,6 +1,4 @@
 
-
-
 #ifndef ANIMAL_HPP_
 #define ANIMAL_HPP_
 

@@ -6,7 +6,8 @@ CFLAG =  -std=c++98 -Wall -Werror -Wextra -g
 
 SRCS =	main.cpp\
 		Animal.cpp\
-		Cat.cpp
+		Cat.cpp\
+		Dog.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
