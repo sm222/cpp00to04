@@ -2,7 +2,7 @@
 
 Animal::Animal(void) {
   std::cout << "Constructor animal call" << std::endl;
-  setType("none");
+  setType("Animal");
 }
 
 Animal::Animal(const Animal &other) {

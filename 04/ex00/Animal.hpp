@@ -12,12 +12,11 @@ class Animal {
   Animal &operator=(const Animal &rhs);
   ~Animal(void);
 
+  std::string getType(void) const;
   virtual void makeSound(void) const;
  protected:
-  std::string _type;
   void setType(const std::string type);
-  std::string getType(void) const;
- private:
+  std::string _type;
 };
 
 #endif // ANIMAL_HPP_
