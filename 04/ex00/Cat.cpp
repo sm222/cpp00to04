@@ -16,7 +16,7 @@ Cat::Cat(const Cat &other) {
 
 // Copy assignment overload
 Cat &Cat::operator=(const Cat &rhs) {
-  (void)rhs;
+  setType(rhs.getType());
   std::cout << "Copy assignment overload for cat" << std::endl;
   return (*this);
 }

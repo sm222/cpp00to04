@@ -16,8 +16,8 @@ WrongAnimal::WrongAnimal(const WrongAnimal &other) {
 // Copy assignment overload
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs) {
   std::cout << "Copy assignment overload WrongAnimal" << std::endl;
-  (void)rhs;
-  return *this;
+  setType(rhs.getType());
+  return (*this);
 }
 
 // Default destructor
@@ -33,6 +33,6 @@ void  WrongAnimal::setType(const std::string type) {
   this->_type = type;
 }
 
-std::string WrongAnimal::getType(void) {
+std::string WrongAnimal::getType(void) const {
   return (this->_type);
 }

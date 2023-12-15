@@ -16,8 +16,8 @@ WrongCat::WrongCat(const WrongCat &other) {
 // Copy assignment overload
 WrongCat &WrongCat::operator=(const WrongCat &rhs) {
   std::cout << "Copy assignment overload WrongCat" << std::endl;
-  (void)rhs;
-  return *this;
+  setType(rhs.getType());
+  return (*this);
 }
 
 // Default destructor
