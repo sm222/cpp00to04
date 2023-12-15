@@ -1,10 +1,10 @@
 
 #include "Cat.hpp"
-#include "Animal.hpp"
 
 // Default constructor
 Cat::Cat() {
   std::cout << "Default constructor for cat" << std::endl;
+  this->brain = new Brain();
   setType("Cat");
 }
 
@@ -23,6 +23,7 @@ Cat &Cat::operator=(const Cat &rhs) {
 
 // Default destructor
 Cat::~Cat() {
+  delete this->brain;
   std::cout << "destructor cat" << std::endl;
 }
 
