@@ -1,5 +1,6 @@
 
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 // Default constructor
 Cat::Cat() {
@@ -17,6 +18,7 @@ Cat::Cat(const Cat &other) {
 // Copy assignment overload
 Cat &Cat::operator=(const Cat &rhs) {
   setType(rhs.getType());
+  this->_brain = rhs._brain;
   std::cout << "Copy assignment overload for cat" << std::endl;
   return (*this);
 }
@@ -31,3 +33,10 @@ void Cat::makeSound(void) const {
   std::cout << "miaou" << std::endl;
 }
 
+void Cat::setBrain(const std::string val, unsigned int i) {
+  this->_brain->setIdea(val, i);
+}
+
+std::string Cat::getBrain(unsigned int i) const{
+  return (this->_brain->getIdea(i));
+}

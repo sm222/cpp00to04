@@ -18,6 +18,7 @@ Dog::Dog(const Dog &other) {
 // Copy assignment overload
 Dog &Dog::operator=(const Dog &rhs) {
   setType(rhs.getType());
+  this->_brain = rhs._brain;
   std::cout << "Copy assignment overload for dog" << std::endl;
   return (*this);
 }
@@ -30,4 +31,12 @@ Dog::~Dog() {
 
 void Dog::makeSound(void) const {
   std::cout << "woof" << std::endl;
+}
+
+void Dog::setBrain(const std::string val, unsigned int i) {
+  this->_brain->setIdea(val, i);
+}
+
+std::string Dog::getBrain(unsigned int i) const{
+  return (this->_brain->getIdea(i));
 }

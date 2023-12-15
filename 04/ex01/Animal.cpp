@@ -31,3 +31,16 @@ std::string Animal::getType(void) const{
 void  Animal::makeSound(void) const {
     std::cout << "silence ..." << std::endl;
 }
+
+void Animal::setBrain(const std::string val, unsigned int i) {
+  (void)val;
+  (void)i;
+  std::cout << "no brain here" << std::endl;
+  return ;
+}
+
+std::string Animal::getBrain(unsigned int i) const{
+  (void)i;
+  std::cout << "no brain here" << std::endl;
+  return ("");
+}

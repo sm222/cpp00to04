@@ -23,7 +23,13 @@ int main(void) {
   sayType(*d);
   WrongAnimal *e = new WrongAnimal;
   sayType(*e);
-
+  for (size_t i = 0; i < 150; i++)
+  {
+    a->setBrain("eat", i);
+    b->setBrain("void", i);
+    b->getBrain(i);
+    std::cout << a->getBrain(i) << std::endl;
+  }
 
   delete a;
   delete b;
