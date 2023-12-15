@@ -5,7 +5,7 @@
 // Default constructor
 Dog::Dog() {
   std::cout << "Default constructor for dog" << std::endl;
-  setType("Dog");
+  this->setType("Dog");
   this->_brain = new Brain;
 }
 
@@ -17,7 +17,7 @@ Dog::Dog(const Dog &other) {
 
 // Copy assignment overload
 Dog &Dog::operator=(const Dog &rhs) {
-  setType(rhs.getType());
+  this->setType(rhs.getType());
   this->_brain = rhs._brain;
   std::cout << "Copy assignment overload for dog" << std::endl;
   return (*this);

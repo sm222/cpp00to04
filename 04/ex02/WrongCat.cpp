@@ -16,7 +16,7 @@ WrongCat::WrongCat(const WrongCat &other) {
 // Copy assignment overload
 WrongCat &WrongCat::operator=(const WrongCat &rhs) {
   std::cout << "Copy assignment overload WrongCat" << std::endl;
-  setType(rhs.getType());
+  this->setType(rhs.getType());
   return (*this);
 }
 

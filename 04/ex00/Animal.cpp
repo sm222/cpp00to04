@@ -2,7 +2,7 @@
 
 Animal::Animal(void) {
   std::cout << "Constructor animal call" << std::endl;
-  setType("Animal");
+  this->setType("Animal");
 }
 
 Animal::Animal(const Animal &other) {
@@ -12,7 +12,7 @@ Animal::Animal(const Animal &other) {
 
 Animal &Animal::operator=(const Animal &rhs) {
   std::cout << "equal Constructor animal call" << std::endl;
-  setType(rhs._type);
+  this->setType(rhs._type);
   return (*this);
 }
 

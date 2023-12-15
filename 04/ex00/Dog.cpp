@@ -16,7 +16,7 @@ Dog::Dog(const Dog &other) {
 
 // Copy assignment overload
 Dog &Dog::operator=(const Dog &rhs) {
-  setType(rhs.getType());
+  this->setType(rhs.getType());
   std::cout << "Copy assignment overload for dog" << std::endl;
   return (*this);
 }

@@ -6,7 +6,7 @@
 Cat::Cat() {
   std::cout << "Default constructor for cat" << std::endl;
   this->_brain = new Brain();
-  setType("Cat");
+  this->setType("Cat");
 }
 
 // Copy constructor
@@ -17,7 +17,7 @@ Cat::Cat(const Cat &other) {
 
 // Copy assignment overload
 Cat &Cat::operator=(const Cat &rhs) {
-  setType(rhs.getType());
+  this->setType(rhs.getType());
   this->_brain = rhs._brain;
   std::cout << "Copy assignment overload for cat" << std::endl;
   return (*this);

@@ -16,7 +16,7 @@ Brain::Brain(const Brain &other) {
 Brain &Brain::operator=(const Brain &rhs) {
   std::cout << "Copy assignment overload Brain" << std::endl;
   for (size_t i = 0; i < 100; i++)
-    setIdea(rhs.getIdea(i), i); 
+    this->setIdea(rhs.getIdea(i), i); 
   return (*this);
 }
 

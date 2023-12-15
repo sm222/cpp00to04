@@ -4,7 +4,7 @@
 // Default constructor
 WrongAnimal::WrongAnimal(void) {
   std::cout << "Default constructor WrongAnimal" << std::endl;
-  setType("WrongAnimal");
+  this->setType("WrongAnimal");
 }
 
 // Copy constructor
@@ -16,7 +16,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &other) {
 // Copy assignment overload
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs) {
   std::cout << "Copy assignment overload WrongAnimal" << std::endl;
-  setType(rhs.getType());
+  this->setType(rhs.getType());
   return (*this);
 }
 
