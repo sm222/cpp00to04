@@ -13,8 +13,10 @@ class Cat : public Animal {
   Cat &operator=(const Cat &rhs);
   ~Cat(void);
   void makeSound(void) const;
+  //void setIdeaCat(const std::string idea, unsigned int i);
+  //std::string getIdeaCat(unsigned int i) const;
  private:
-  Brain *brain;
+  Brain *_brain;
 };
 
 #endif // CAT_HPP_

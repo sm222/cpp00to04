@@ -23,7 +23,7 @@ Dog &Dog::operator=(const Dog &rhs) {
 
 // Default destructor
 Dog::~Dog() {
-  std::cout << "destructor dog" << std::endl;
+  std::cout << "Destructor dog" << std::endl;
 }
 
 void Dog::makeSound(void) const {

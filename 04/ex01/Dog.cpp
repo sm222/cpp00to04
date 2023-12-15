@@ -6,6 +6,7 @@
 Dog::Dog() {
   std::cout << "Default constructor for dog" << std::endl;
   setType("Dog");
+  this->_brain = new Brain;
 }
 
 // Copy constructor
@@ -23,7 +24,8 @@ Dog &Dog::operator=(const Dog &rhs) {
 
 // Default destructor
 Dog::~Dog() {
-  std::cout << "destructor dog" << std::endl;
+  delete this->_brain;
+  std::cout << "Destructor dog" << std::endl;
 }
 
 void Dog::makeSound(void) const {
