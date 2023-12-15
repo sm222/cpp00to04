@@ -31,13 +31,3 @@ void Cat::makeSound(void) const {
   std::cout << "miaou" << std::endl;
 }
 
-//TODO: add to next number
-/*
-? void Cat::setIdeaCat(const std::string idea, unsigned int i) {
-?  this->_brain->setIdea(idea, i);
-? }
-? 
-? std::string Cat::getIdeaCat(unsigned int i) const {
-?   return(this->_brain->getIdea(i));
-? }
-*/
