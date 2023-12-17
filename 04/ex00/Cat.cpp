@@ -11,7 +11,6 @@ Cat::Cat() {
 // Copy constructor
 Cat::Cat(const Cat &other) {
   std::cout << "Copy constructor for cat" << std::endl;
-  *this = other;
 }
 
 // Copy assignment overload

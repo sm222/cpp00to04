@@ -11,7 +11,6 @@ Dog::Dog() {
 // Copy constructor
 Dog::Dog(const Dog &other) {
   std::cout << "Copy constructor for dog" << std::endl;
-  *this = other;
 }
 
 // Copy assignment overload

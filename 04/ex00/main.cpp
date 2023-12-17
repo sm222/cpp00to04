@@ -5,13 +5,15 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
+
 int main(void) {
+
   Animal *a = new Cat;
   Animal *b = new Dog;
   Animal *c = new Animal;
   WrongAnimal *d = new WrongCat;
   WrongAnimal *e = new WrongAnimal;
-  //* Cat *e = new Animal; won't wokr becose animal can be a cat but a cat can't be a animal
+  //// Cat *e = new Animal; won't wokr becose animal can be a cat but a cat can't be a animal
   std::cout << "a is " << a->getType() << std::endl;
   a->makeSound();
   std::cout << "b is " << b->getType() << std::endl;
