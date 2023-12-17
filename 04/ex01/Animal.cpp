@@ -2,6 +2,11 @@
 
 Animal::Animal(void) {
   std::cout << "Constructor animal call" << std::endl;
+  this->setType("Animal");
+}
+
+Animal::Animal(std::string type) : _type(type) {
+  std::cout << "Constructor animal call with string" << std::endl;
   setType("Animal");
 }
 

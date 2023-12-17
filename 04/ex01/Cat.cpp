@@ -1,18 +1,16 @@
 
 #include "Cat.hpp"
-#include "Brain.hpp"
 
 // Default constructor
 Cat::Cat() {
   std::cout << "Default constructor for cat" << std::endl;
-  this->_brain = new Brain();
   this->setType("Cat");
+  this->_brain = new Brain;
 }
 
 // Copy constructor
-Cat::Cat(const Cat &other) {
+Cat::Cat(const Cat &other) : Animal("Cat") , _brain(new Brain(*other._brain)) {
   std::cout << "Copy constructor for cat" << std::endl;
-  *this = other;
 }
 
 // Copy assignment overload

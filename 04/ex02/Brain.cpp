@@ -9,7 +9,8 @@ Brain::Brain(void) {
 // Copy constructor
 Brain::Brain(const Brain &other) {
   std::cout << "Copy constructor for Brain" << std::endl;
-  *this = other;
+  for (size_t i = 0; i < 100; i++)
+    this->setIdea(other.getIdea(i), i);
 }
 
 // Copy assignment overload

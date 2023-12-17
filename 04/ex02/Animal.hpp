@@ -16,6 +16,7 @@ class AAnimal {
  protected:
   AAnimal &operator=(const AAnimal &rhs);
   AAnimal(void);
+  AAnimal(std::string type);
   AAnimal(const AAnimal &other);
   void setType(const std::string type);
   std::string _type;

@@ -1,6 +1,5 @@
 
 #include "Cat.hpp"
-#include "Brain.hpp"
 
 // Default constructor
 Cat::Cat() {
@@ -10,9 +9,8 @@ Cat::Cat() {
 }
 
 // Copy constructor
-Cat::Cat(const Cat &other) {
+Cat::Cat(const Cat &other) : AAnimal("Cat") , _brain(new Brain(*other._brain)) {
   std::cout << "Copy constructor for cat" << std::endl;
-  *this = other;
 }
 
 // Copy assignment overload

@@ -1,6 +1,5 @@
 
 #include "Dog.hpp"
-#include "Animal.hpp"
 
 // Default constructor
 Dog::Dog() {
@@ -10,9 +9,8 @@ Dog::Dog() {
 }
 
 // Copy constructor
-Dog::Dog(const Dog &other) {
+Dog::Dog(const Dog &other) : Animal("Dog") , _brain(new Brain(*other._brain)) {
   std::cout << "Copy constructor for dog" << std::endl;
-  *this = other;
 }
 
 // Copy assignment overload

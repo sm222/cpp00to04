@@ -21,6 +21,10 @@ int main(void) {
   sayType(*d);
   WrongAnimal *e = new WrongAnimal;
   sayType(*e);
+  Cat f;
+  f.setBrain("life", 9);
+  Cat g = Cat(f);
+  std::cout << g.getBrain(9) << std::endl;
   for (size_t i = 0; i < 101; i++)
   {
     a->setBrain("eat", i);
